@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Electric Bike PCB</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/dfa38557e3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+
+        <!-----Navigation header and brand-------->
+        <section class="header">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="left-side">
+                        <div class="brand">
+                            <div>ELIOT NICHOLS</div>
+                        </div>
+                    </div>
+                    
+                    <div class="right-side">
+                        <div class="nav-links" id="navLinks">
+                            <i class="fas fa-times" onclick="hideMenu()"></i>
+                            <ul>
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="projects.html">PROJECTS</a></li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <i class="fas fa-bars" onclick="showMenu()"></i>
+                </div>
+            </nav>
+
+        </section>
+
+        <!---------project2------------>
+
+        <section class="project2">
+            <div class="row">
+                <div class="p2-col">
+                    <h2>Electric Bike PCB</h2>
+                    <p>
+                        As part of the study of circuit design using semiconductor diodes and field-effect transistors, 
+                        this project aimed to create a voltage doubling circuit simulating a battery powered device. 
+                        Although the core of this project was to double a DC voltage only an AC voltage supply was allowed. 
+                        This supply would have to be converted to a DC voltage before doubling. A restriction was also placed 
+                        on using any kind of pulse generating integrated circuits, such as the 555 timer IC. After designing 
+                        a half-wave rectifier circuit to convert the AC voltage to a DC voltage, my team and I decided on using 
+                        a boost converter circuit to achieve the output voltage required. A working boost converter circuit 
+                        needs a pulse signal to be sent to a transistor. This meant that my we had to 
+                        make our own pulse generating circuit. After much deliberation and testing, we settled on using a 
+                        stable NAND gate oscillator circuit to produce the signal needed for the transistor. By calculating 
+                        the values of the resistors and capacitor, we were able to produce a clocking signal with a duty 
+                        cycle of 50%. The rectifier, NAND gate oscillator, and boost converter circuits were designed and 
+                        tested using the simulation software SPICE. After seeing that the circuits worked together as desired, 
+                        we constructed the physical circuit and ran tests. With no load, the rectifier circuit gave a voltage 
+                        output of 9.57 volts with less than 0.2% voltage ripple. This 9.57 volt output was then doubled to 
+                        19.82 volts with the boost converter circuit.Testing the circuit with loads of 5kΩ and greater, the 
+                        output was consistently around 20 volts. The full circuit diagram is shown here on the page and if 
+                        you would like to know more about this project the lab report can be found by clicking the link below.
+                    </p>
+                    <div class=p2-link>
+                        <p>
+                            <a href="documents/Voltage Multiplier Project Report.pdf">Lab Report Link</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="p2-col">
+                    <img src="images/ElectricBikePCBAltium.jpg">
+                </div>
+            </div>
+        </section>
+    
+        <!-------JavaScript for Toggle Menu---------->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Project3</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/dfa38557e3.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+
+        <!-----Navigation header and brand-------->
+        <section class="header">
+            <nav>
+                <div class="nav-wrapper">
+                    <div class="left-side">
+                        <div class="brand">
+                            <div>ELIOT NICHOLS</div>
+                        </div>
+                    </div>
+                    
+                    <div class="right-side">
+                        <div class="nav-links" id="navLinks">
+                            <i class="fas fa-times" onclick="hideMenu()"></i>
+                            <ul>
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="projects.html">PROJECTS</a></li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <i class="fas fa-bars" onclick="showMenu()"></i>
+                </div>
+            </nav>
+
+        </section>
+
+        <!---------project3------------>
+
+        <section class="project3">
+            <div class="row">
+                <div class="p3-col">
+                    <h2>Project 3</h2>
+                    <p>
+                        Here is a little about p1/2/3, what p1/2/3 is, and so on blah bagi difjsbdlf
+                        dfsidlfndfd fidshfk dfhsidf uhdsfhsdi ufhsdu dsfh dsufu sdfh dshuf ufh sdihf eihf sdifosdnfisodd
+                        sdfs the 20th season of competitive football for the club and their first in the Football League, 
+                        having been voted into the Second Division. They finished the season tied on points with Birmingham, 
+                        who were champions on goal average; both teams were promoted to the First Division. Cardiff reached
+                         the semi-final of the FA Cup, defeating First Division sides Sunderland and Chelsea. They were 
+                         knocked out by Second Division Wolverhampton Wanderers. In the Welsh Cup, Cardiff, the holders, 
+                         were beaten by Pontypridd after a fixture clash forced them to field a reserve side. Cardiff 
+                         fielded 29 players in 1920–21, Billy Hardy playing in the most games. New signing Jimmy Gill was the 
+                         club's top goalsco
+                    </p>
+                </div>
+                <div class="p3-col">
+                    <img src="images/about.jpg">
+                </div>
+            </div>
+        </section>
+    
+        <!-------JavaScript for Toggle Menu---------->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+            
+            function showMenu(){
+                navLinks.style.right = "0";
+            }
+
+            function hideMenu(){
+                navLinks.style.right = "-200px";
+            }
+
+        </script>
+
+    </body>
+</html>
